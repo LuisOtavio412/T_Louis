@@ -28,7 +28,6 @@ int combinacao_simples(int a, int b) {
     return n/(k*kn);
 }
 
-
 void ex_12() {
     //Quantas saladas contendo 4 frutas distintas podem
     //ser formadas com 7 tipos diferentes de frutas?
@@ -38,3 +37,14 @@ void ex_12() {
 
     printf("Vao ter %d", saladas);
 }
+
+void ex_15() {
+    //De quantos modos diferentes podemos escolher 6 pessoas,
+    //incluindo pelo menos duas mulheres,em um grupo de 7 homens e 4mulheres?
+
+
+}
+void ex_20(){}
+void ex_79(){}
+void ex_155(){}
+void ex_221(){}
