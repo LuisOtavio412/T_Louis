@@ -3,6 +3,8 @@
 
 int main(void) {
 
-    ex_12();
+    //ex_12();
+    ex_20();
+
     return 0;
 }

@@ -17,6 +17,10 @@ int fatorial(int a) {
     }
     return resultado;
 }
+int combinacao_repeticao(int a, int b) {
+    return fatorial(a+b-1)/(fatorial(b)*fatorial(a-1));
+}
+
 //Combinação simples
 // Formula: C(n,k)= (n!)/(k!*(n-k)!)
 int combinacao_simples(int a, int b) {
@@ -43,11 +47,25 @@ void ex_12() {
 
 void ex_15() {
     //De quantos modos diferentes podemos escolher 6 pessoas,
-    //incluindo pelo menos duas mulheres,em um grupo de 7 homens e 4mulheres?
+    //incluindo pelo menos duas mulheres,em um grupo de 7 homens e 4 mulheres?
+
 
 
 }
-void ex_20(){}
+void ex_20() {
+    int n, k;
+
+    printf("Entre com o total de sucos disponiveis disponiveis: ");
+    scanf("%d", &n);
+    printf("Entre com a quantidade de sucos que vai escolher: ");
+    scanf("%d", &k);
+    if ((n-k)<=0) {
+        exit(EXIT_FAILURE);
+    }
+    int C = combinacao_repeticao(n, k);
+
+    printf("Vao ter %d maneiras distintas de pedir o suco", C);
+}
 void ex_79(){}
 void ex_155(){}
 void ex_221(){}
