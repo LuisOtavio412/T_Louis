@@ -4,12 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "exercicios.h"
-//Permutação simples
-//Formula: (P_n = n!(onde n! = n * (n-1) * ... * 1)).
-//Permutação com repetição
-// Formula: (P_n^{a, b, c} = (n!)/(a! * b! * c!) (onde a, b, c são as repetições de cada elemento
-//Arranjo simples
-// Formula: A(n,k)= (n!)/(n-k)!
+
 int fatorial(int a) {
     int resultado = 1;
     for(int i = 1; i <= a; i++) {
@@ -20,18 +15,15 @@ int fatorial(int a) {
 int combinacao_repeticao(int a, int b) {
     return fatorial(a+b-1)/(fatorial(b)*fatorial(a-1));
 }
-
 //Combinação simples
 // Formula: C(n,k)= (n!)/(k!*(n-k)!)
 int combinacao_simples(int a, int b) {
     return fatorial(b)/(fatorial(a)*fatorial(b-a));
 }
-
 //probabilidade básica
 float prop_basica(float a, float b) {
     return a/b;
 }
-
 void ex_12() {
     //Quantas saladas contendo 4 frutas distintas podem
     //ser formadas com 7 tipos diferentes de frutas?
@@ -49,12 +41,18 @@ void ex_12() {
 
     printf("Vao ter %d", C);
 }
-
 void ex_15() {
-    //De quantos modos diferentes podemos escolher 6 pessoas,
-    //incluindo pelo menos duas mulheres,em um grupo de 7 homens e 4 mulheres?
+    //De quantos modos diferentes podemos escolher 6 pessoas, incluindo pelo menos duas mulheres,em um grupo de 7 homens e 4 mulheres?
+    int homens = 7, mulheres = 4;
 
+    int caso_1 = combinacao_simples(2,mulheres)*(combinacao_simples(4, homens));
+    int caso_2 = combinacao_simples(3,mulheres)*(combinacao_simples(3, homens));
+    int caso_3 = combinacao_simples(4,mulheres)*(combinacao_simples(2, homens));
 
+    int total = caso_1 + caso_2 + caso_3;
+
+    printf("No caso um %d, no caso dois %d e no ultimo caso %d, tendo um total de %d modos diferentes\n",
+        caso_1, caso_2, caso_3, total);
 
 }
 void ex_20() {
@@ -93,7 +91,7 @@ void ex_155() {
 void ex_221() {
     //Considere o lancamento simultaneo de dois dados comuns, de seis faces. Determine: a.) Qual a probabilidade de obter uma soma das
     //faces ser igual a 8? b.) Qual a probabilidade de se obter o modulo da diferenca entre as faces igual a 3?
-
+    int dado_1, dado_2;
 
 
 }

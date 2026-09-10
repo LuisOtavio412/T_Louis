@@ -6,6 +6,7 @@
 #define T_LOUIS_EXERCICIOS_H
 
 void ex_12();
+void ex_15();
 void ex_20();
 void ex_79();
 
