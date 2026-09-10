@@ -7,5 +7,6 @@
 
 void ex_12();
 void ex_20();
+void ex_79();
 
 #endif //T_LOUIS_EXERCICIOS_H

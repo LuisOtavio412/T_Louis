@@ -27,6 +27,11 @@ int combinacao_simples(int a, int b) {
     return fatorial(b)/(fatorial(a)*fatorial(b-a));
 }
 
+//probabilidade básica
+float prop_basica(float a, float b) {
+    return a/b;
+}
+
 void ex_12() {
     //Quantas saladas contendo 4 frutas distintas podem
     //ser formadas com 7 tipos diferentes de frutas?
@@ -66,6 +71,29 @@ void ex_20() {
 
     printf("Vao ter %d maneiras distintas de pedir o suco", C);
 }
-void ex_79(){}
-void ex_155(){}
-void ex_221(){}
+void ex_79() {
+    //Em uma caixa h´a 2 fichas amarelas, 5 fichas azuis e 7 fichas verdes. Se retirarmos uma ´unica
+    //ficha, qual a probabilidade dela ser verde ou amarela?
+    float total/*(Total de casos)*/, amarelas, azuis, verdes;
+
+    printf("Entres com o numero de cores das fichas amarelas, azuis e verdes: ");
+    scanf("%f %f %f", &amarelas, &azuis, &verdes);
+
+    total = amarelas + azuis + verdes;
+    amarelas = prop_basica(amarelas, total);
+    azuis = prop_basica(azuis, total);
+    verdes = prop_basica(verdes, total);
+
+    printf("A probabilidade de ser amarela e %.2f, azuis  %.2f, verdes %.2f", amarelas, azuis, verdes);
+
+}
+void ex_155() {
+
+}
+void ex_221() {
+    //Considere o lancamento simultaneo de dois dados comuns, de seis faces. Determine: a.) Qual a probabilidade de obter uma soma das
+    //faces ser igual a 8? b.) Qual a probabilidade de se obter o modulo da diferenca entre as faces igual a 3?
+
+
+
+}

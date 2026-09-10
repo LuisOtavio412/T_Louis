@@ -4,7 +4,8 @@
 int main(void) {
 
     //ex_12();
-    ex_20();
+    //ex_20();
+    ex_79();
 
     return 0;
 }
