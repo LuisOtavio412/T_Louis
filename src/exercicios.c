@@ -91,7 +91,25 @@ void ex_155() {
 void ex_221() {
     //Considere o lancamento simultaneo de dois dados comuns, de seis faces. Determine: a.) Qual a probabilidade de obter uma soma das
     //faces ser igual a 8? b.) Qual a probabilidade de se obter o modulo da diferenca entre as faces igual a 3?
-    int dado_1, dado_2;
+    int dado_1 = 6, dado_2 = 6;
+    float n, total_comb = 36.0, diferenca = 0.0, soma_de_dados = 0.0;
 
+
+    for (int i = 1; i <= dado_1; ++i) {
+        for (int j = 1; j <= dado_2; ++j) {
+            if (i + j == 8) {
+                soma_de_dados++;
+            }
+            //abs o modulo
+            if (abs(i - j) == 3) {
+                diferenca++;
+            }
+        }
+    }
+    float prob_cas = prop_basica(soma_de_dados, total_comb);
+    float prob_dif = prop_basica(diferenca, total_comb);
+
+    printf("A probabilidade de obter uma das somas igual a 8 é %.2f", prob_cas);
+    printf("A probabilidade de obter o modulo da diferenca entre as faces igual a 3 é %.2f", prob_dif);
 
 }
