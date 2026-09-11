@@ -109,7 +109,7 @@ void ex_221() {
     float prob_cas = prop_basica(soma_de_dados, total_comb);
     float prob_dif = prop_basica(diferenca, total_comb);
 
-    printf("A probabilidade de obter uma das somas igual a 8 é %.2f", prob_cas);
+    printf("A probabilidade de obter uma das somas igual a 8 é %.2f\n", prob_cas);
     printf("A probabilidade de obter o modulo da diferenca entre as faces igual a 3 é %.2f", prob_dif);
 
 }
